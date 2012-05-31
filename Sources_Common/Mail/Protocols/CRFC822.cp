@@ -2287,7 +2287,7 @@ unsigned long CRFC822::GetMonth(char* month)
 long CRFC822::GetZone(char* zone)
 {
 	// Look for +/- or digit
-	if ((*zone == '+') || (*zone == '-') || isdigit(*zone))
+	if ((*zone == '+') || (*zone == '-') || isdigit((unsigned char)*zone))
 	{
 		// Convert numeric value
 		return ::atol(zone);
