@@ -1074,7 +1074,6 @@
     <ClInclude Include="..\Libraries\XMLLib\Source\XMLParser.h" />
     <ClInclude Include="..\Libraries\XMLLib\Source\XMLParserSAX.h" />
     <ClInclude Include="..\Libraries\XMLLib\Source\XMLSAXSimple.h" />
-    <ClInclude Include="..\sources_common\utilities\xsvector.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RESXP\3PaneClose.ico" />

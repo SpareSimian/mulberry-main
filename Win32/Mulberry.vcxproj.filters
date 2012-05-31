@@ -2742,9 +2742,6 @@
     <ClInclude Include="..\Libraries\XMLLib\Source\XMLSAXSimple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\sources_common\utilities\xsvector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RESXP\3PaneClose.ico">

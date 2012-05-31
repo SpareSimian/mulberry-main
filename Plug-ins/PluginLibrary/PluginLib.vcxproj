@@ -120,7 +120,7 @@
     <ClInclude Include="..\..\Sources_Common\Utilities\CCharSpecials.h" />
     <ClInclude Include="..\..\Sources_Common\i18n\Charsets\Converters\CConverterBase.h" />
     <ClInclude Include="..\..\Sources_Common\i18n\Charsets\Converters\OneByte\CConverterOneByte.h" />
-    <ClInclude Include="..\Sources_Common\Utilities\cdstring.h" />
+    <ClInclude Include="..\..\Sources_Common\Utilities\cdstring.h" />
     <ClInclude Include="..\..\Sources_Common\Utilities\cdustring.h" />
     <ClInclude Include="..\..\Sources_Common\Utilities\char_stream.h" />
     <ClInclude Include="..\..\Sources_Common\Utilities\CStringUtils.h" />
