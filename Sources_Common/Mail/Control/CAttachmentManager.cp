@@ -750,7 +750,9 @@ bool CAttachmentManager::MapToFile(const cdstring& name, fspectype& file, bool v
 		const char* fext = ::strchr(fname.c_str(), '.');
 		if (fext)
 			fext++;
-		CFileDialog dlg(false, cdstring(fext).win_str(), fname.win_str(), OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT, NULL, CSDIFrame::GetAppTopWindow());
+		const CString winstrFname(fname.win_str());
+		const CString winstrDefExt(cdstring(fext).win_str());
+		CFileDialog dlg(false, winstrDefExt, winstrFname, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT, NULL, CSDIFrame::GetAppTopWindow());
 
 		if (dlg.DoModal() == IDOK)
 		{
