@@ -22,7 +22,7 @@
 #ifndef __CSDIDOC__MULBERRY__
 #define __CSDIDOC__MULBERRY__
 
-class CSDIDoc : public CDocument
+class CSDIDoc : public CRichEditDoc
 {
 protected: // create from serialization only
 	CSDIDoc() {}
@@ -40,6 +40,12 @@ public:
 
 	virtual void SetTitle(LPCTSTR lpszTitle);
 
+        // override
+        CRichEditCntrItem* CreateClientItem(REOBJECT* preo) const
+        {
+           // cast away constness of this
+           return new CRichEditCntrItem(preo, const_cast<CSDIDoc*>(this));
+        }
 // Generated message map functions
 protected:
 	//{{AFX_MSG(CSDIDoc)

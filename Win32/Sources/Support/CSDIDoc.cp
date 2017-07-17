@@ -26,9 +26,9 @@
 /////////////////////////////////////////////////////////////////////////////
 // CSDIDoc
 
-IMPLEMENT_DYNCREATE(CSDIDoc, CDocument)
+IMPLEMENT_DYNCREATE(CSDIDoc, CRichEditDoc)
 
-BEGIN_MESSAGE_MAP(CSDIDoc, CDocument)
+BEGIN_MESSAGE_MAP(CSDIDoc, CRichEditDoc)
 	//{{AFX_MSG_MAP(CSDIDoc)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
@@ -40,9 +40,10 @@ END_MESSAGE_MAP()
 
 void CSDIDoc::SetTitle(LPCTSTR lpszTitle)
 {
-	CDocument::SetTitle(lpszTitle);
-	POSITION pos = GetFirstViewPosition();
-	CView* pView = GetNextView(pos);
+	CView* pView = GetView();
+	if (!pView)
+		return;
+	CRichEditDoc::SetTitle(lpszTitle);
 	CFrameWnd* aFrame = pView->GetParentFrame();
 	
 	// Title will be utf8 text
