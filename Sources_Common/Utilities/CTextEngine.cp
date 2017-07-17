@@ -574,7 +574,7 @@ const char* CTextEngine::StripQuotedLines(const char* text, const cdstrvect& quo
 		}
 
 		// Punt whitespace at start of line
-		else if (line_start && isspace(*p))
+		else if (line_start && isspace(0xFF & *p))
 		{
 			out << *p++;
 			continue;

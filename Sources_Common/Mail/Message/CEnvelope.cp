@@ -417,7 +417,7 @@ cdstring CEnvelope::NormaliseSubject(bool matching) const
 		bool was_space = false;
 		while(*p)
 		{
-			bool is_space = isspace(*p);
+			bool is_space = isspace((unsigned char)*p);
 			if (is_space && was_space)
 				p++;
 			else
@@ -447,7 +447,7 @@ cdstring CEnvelope::NormaliseSubject(bool matching) const
 			// Remove trailing space
 			while(p != end_p)
 			{
-				if (isspace(*end_p))
+				if (isspace((unsigned char)*end_p))
 				{
 					*end_p-- = 0;
 					changed = true;
